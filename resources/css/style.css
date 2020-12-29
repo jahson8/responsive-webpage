@@ -1,0 +1,158 @@
+/* Reset Border Box */
+html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  /* Base Styles */
+
+
+
+html,
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    opacity: 0.9;
+
+}
+
+html,
+body,
+a {
+    color: seashell;
+}
+
+body {
+   padding-top: 92px;
+}
+
+html,
+body,
+header {
+    background-color: black;
+}
+
+
+  /* Header Styles*/
+.main-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    border-bottom: 1px solid seashell;
+}
+
+.nav-container{
+    padding: 10px;
+}
+
+
+
+.brand img {
+   height: 50px;
+ 
+}
+
+
+.nav-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70px;
+    width: 70px;
+}
+
+.nav-list {
+    display: none;
+
+}
+
+nav {
+    width: 100%;
+    padding:  0 15px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    text-align: center;
+}
+
+#nav-toggle{
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: seashell;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span:before {
+    top: -10px;
+}
+#nav-toggle span:after {
+    bottom: -10px;
+}
+
+#nav-toggle.active span {
+    background-color: transparent;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+    top: 0;
+}    
+
+#nav-toggle.active span:before {
+    transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+    transform: rotate(-45deg);
+}
+
+@media only screen and (min-width: 800px){
+    .main-header {
+        height: 69px;
+    }
+
+    .nav-list{
+        display: block;
+        float : right;
+        margin-top: -15px;
+    }
+    .brand,
+    .nav-list li {
+        float: left;
+    }
+
+    #nav-toggle{
+        display: none;
+    }
+}
+
+
+  /* utilty classes*/
+
+    

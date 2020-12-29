@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tea Cozy</title>
     <link rel="stylesheet" href="./resources/css/reset.css">
-    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="./resources/css/style.css"> 
 </head>
 <body>
-    <header>
-        <img src="./resources/images/img-tea-cozy-logo.png" alt="">
-        <nav>
-            <ul>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#featured">Featured Tea</a></li>
-                <li><a href="#locations">Locations</a></li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="brand">
+                <img src="./resources/images/img-tea-cozy-logo.png" alt="Company Logo">
+            </div>
+            <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list"> 
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#featured">Featured Tea</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                </ul>
+            </nav>    
+        </div>
     </header>
-    <main>
+    <main class="container">
         <section id="mission">
             <div>
                 <h2>Our Mission</h2>
@@ -73,5 +78,7 @@
     <footer>
         <h5>copyright The Tea Cozy 2017</h5>
     </footer>
+    <script src="./resources/js/index.js"></script>
 </body>
+
 </html>
