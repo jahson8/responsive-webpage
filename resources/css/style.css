@@ -11,20 +11,25 @@ html {
 
   /* Base Styles */
 
-
+  html,
+  body,
+  header {
+      background-color: rgba(0,0,0);
+  }
 
 html,
 body {
     font-family: Helvetica, sans-serif;
     font-size: 16px;
     opacity: 0.9;
-
 }
+
+
 
 @media(min-width: 768px){
     html,
     body {
-        font-size: 18px;  
+        font-size: 20px;  
     }
 }
 
@@ -41,18 +46,15 @@ a {
     color: seashell;
 }
 
-
-
-
-
-html,
-body,
-header {
-    background-color: black;
+body {
+    position: relative;
+    top: 70px;
 }
 
+
 h2,
-h4 {
+h4,
+h5 {
     text-align: center;
 }
 
@@ -75,6 +77,10 @@ h4 {
         max-width: 1200px;
 
     }
+}
+
+.dp-flex {
+    display: flex;
 }
 
 
@@ -175,7 +181,7 @@ nav ul li a {
 
 @media only screen and (min-width: 768px){
     .main-header {
-        height: 69px;
+        min-height: 69px;
     }
 
     .nav-list{
@@ -201,8 +207,9 @@ nav ul li a {
        background-size: cover;
        background-repeat: no-repeat;
        background-position: center;
-       height: 31.8181818rem;
+       min-height: 31.8181818rem;
        position: relative;
+       top: 50%;
    }
 
   
@@ -227,13 +234,10 @@ nav ul li a {
 
 /* featured Section*/
 
-.dp-flex {
-    display: flex;
-}
 .img-container,
 .img-container  li {
     flex-direction: column;
-    align-content:center;
+    align-items:center;
 }
 
 
@@ -243,15 +247,6 @@ nav ul li a {
     flex-wrap: wrap;
 }
 
-
-@media(min-width: 768px){
-    .img-container {
-        max-width: 1000px;
-        flex-direction: row; 
-        justify-content: space-evenly;
-    }  
-}
-
 .img-container img {
     max-width: 100%;
     height: auto;
@@ -259,13 +254,90 @@ nav ul li a {
     
 }
 
+img + p {
+    margin-top: 10px;
+}
+
+
 @media(min-width: 768px){
+    .img-container {
+        max-width: 1000px;
+        flex-direction: row; 
+        justify-content: space-evenly;
+    }  
+
     .img-container img {
         width: 300px;
         height: 200px;
     }  
 }
+
+
+
+
+
    
 
-/* featured Section*/
+/* location Section*/
+
+#locations {
+    background-image: url("../../resources/images/img-locations-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 22.73rem;
+}
+
+#locations h2 {
+    padding-top: 80px;
+    margin-bottom: 15px;
+}
+
+#locations ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+}
+
+#locations ul li {
+    background-color:#000;
+    text-align: center;
+    width: 50%;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+#locations ul li + #locations ul li {
+    margin-right: 20px;
+}
+
+@media(min-width: 1200px){
+    #locations ul{
+        margin-top: 15px;
+        flex-direction: row;
+        justify-content:center;
+    }
+    #locations ul li {
+        margin-left: 40px;
+       width: 300px; 
+    }
+
+}
+
+/* contact section*/
+
+#contact {
+    min-height: 10rem;
+}
+
+#contact h2 {
+    margin-top: 15px;
+}
+
+/* footer*/
+footer h5 {
+    text-align: left;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
 
