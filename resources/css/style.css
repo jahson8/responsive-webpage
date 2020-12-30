@@ -16,9 +16,23 @@ html {
 html,
 body {
     font-family: Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 16px;
     opacity: 0.9;
 
+}
+
+@media(min-width: 768px){
+    html,
+    body {
+        font-size: 18px;  
+    }
+}
+
+@media(min-width: 1024px){
+    html,
+    body {
+        font-size: 22px;  
+    }
 }
 
 html,
@@ -27,9 +41,9 @@ a {
     color: seashell;
 }
 
-body {
-   padding-top: 92px;
-}
+
+
+
 
 html,
 body,
@@ -37,8 +51,34 @@ header {
     background-color: black;
 }
 
+h2,
+h4 {
+    text-align: center;
+}
 
-  /* Header Styles*/
+.container {
+    width: 95%;
+}
+
+.container,
+.img-container {
+    margin: 0 auto;
+}
+@media only screen and (min-width: 768px){
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .container {
+        max-width: 1200px;
+
+    }
+}
+
+
+  /* Header & Nav Styles*/
 .main-header {
     position: fixed;
     width: 100%;
@@ -46,6 +86,7 @@ header {
     left: 0;
     opacity: 1;
     border-bottom: 1px solid seashell;
+    z-index: 10;
 }
 
 .nav-container{
@@ -132,7 +173,7 @@ nav ul li a {
     transform: rotate(-45deg);
 }
 
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 768px){
     .main-header {
         height: 69px;
     }
@@ -153,6 +194,78 @@ nav ul li a {
 }
 
 
-  /* utilty classes*/
+   /* Mission Section*/
 
+   #mission {
+       background-image: url("../../resources/images/img-mission-background.jpg");
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+       height: 31.8181818rem;
+       position: relative;
+   }
+
+  
+
+   #mission .caption{
+       background-color: #000;
+       position: absolute;
+       width: 100%;
+       top: 40%;
+   }
     
+   .caption h4 {
+       margin-top: 10px;
+       margin-bottom: 10px;
+       line-height: 1.5;
+   }
+
+   .caption h2 {
+       margin-top: 10px;
+       margin-bottom:0;
+   }
+
+/* featured Section*/
+
+.dp-flex {
+    display: flex;
+}
+.img-container,
+.img-container  li {
+    flex-direction: column;
+    align-content:center;
+}
+
+
+.img-container {
+    width: 80%;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+
+@media(min-width: 768px){
+    .img-container {
+        max-width: 1000px;
+        flex-direction: row; 
+        justify-content: space-evenly;
+    }  
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+@media(min-width: 768px){
+    .img-container img {
+        width: 300px;
+        height: 200px;
+    }  
+}
+   
+
+/* featured Section*/
+
